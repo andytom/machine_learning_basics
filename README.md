@@ -22,6 +22,11 @@ Installed scikit-learn using pip
 pip install -U scikit-learn
 ```
 
+For video_2 used ``pydotplus`` as ``pydot`` doesn't work on python3
+``` bash
+pip install pydotplus
+```
+
 External Docs
 -------------
 * [virtualenvwrapper docs](https://virtualenvwrapper.readthedocs.org/en/latest/)

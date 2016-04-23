@@ -21,4 +21,16 @@ clf.fit(train_data, train_target)
 print(test_target)
 print(clf.predict(test_data))
 
-# Skipped the pdf generation, pydot doesn't support python 3 :(
+from sklearn.externals.six import StringIO
+import pydotplus as pydot
+
+dot_data = StringIO()
+tree.export_graphviz(clf,
+                     out_file=dot_data,
+                     feature_names=iris.feature_names,
+                     class_names=iris.target_names,
+                     filled=True, rounded=True,
+                     impurity=False)
+
+graph = pydot.graph_from_dot_data(dot_data.getvalue())
+graph.write_pdf("iris.pdf")

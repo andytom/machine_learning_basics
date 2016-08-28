@@ -51,5 +51,10 @@ Use the model
 curl -L https://goo.gl/tx3dqg > ./tf_files/label_image.py
 docker run -it -v $(pwd)/tf_files:/tf_files  gcr.io/tensorflow/tensorflow:latest-devel
 python /tf_files/label_image.py /tf_files/flower_photos/daisy/21652746_cc379e0eea_m.jpg
-python /tf_files/label_image.py /tf_files/flower_photos/roses/2414954629_3708a1a04d.jpg 
+python /tf_files/label_image.py /tf_files/flower_photos/roses/2414954629_3708a1a04d.jpg
 ```
+
+Useful Links
+------------
+* [TensorFlow for Poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0)
+* [Docker Docs](https://docs.docker.com/)
